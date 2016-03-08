@@ -1,7 +1,11 @@
 # Galaban's LOTJMapper
 This is an update to the LOTJ mapper built by Xavious, which came from Johson, which was ported from Aardwolf mud, which came from...Well, you get the idea.  Ultimately, it goes all the way back to Nick Gammon.
 
-Fixes to this implementation:
+Seriously... this came from here:
+https://github.com/Xavious/LotjClient
+
+##Fixes
+This is the list of changes that I made to the standard (err...Xavious's) plugin:
 * Added room deletion.  So now you can delete a room if you want
 * Auto-exit tracking for inverse directions.  (No more walking around like an idiot)
 * Added a "mapper goto" function so that you can "goto 3106".
