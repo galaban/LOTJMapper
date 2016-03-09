@@ -187,8 +187,27 @@ require "mapper"     -- base mapper
 require "serialize"  -- needed to serialize table to string
 require "checkplugin"
 require "tprint"
-dofile(GetPluginInfo(GetPluginID(), 20) .. "lotj_colors.lua")
-dofile(GetPluginInfo(GetPluginID(), 20) .. "LotJMSDPHelper.lua")
+
+function loadluafile(filename)
+
+    f, err = loadfile (GetPluginInfo(GetPluginID(), 20) .. filename)
+    if (f == nil) then
+        -- This is the error we get when we fail the plugin check.  So, copying that error here
+        ColourNote("black","red","--------------------------------------------------------------------------------")
+        ColourNote("black","red","Unable to load file '"..filename.."'.  Please download and install it.")
+        ColourNote("black","red","It is required for the correct operation of the Lotj_Mapper plugin.")
+        ColourNote("black","red","File error:")
+        ColourNote("black","red",err)
+        ColourNote("black","red","--------------------------------------------------------------------------------")
+        EnablePlugin("63e6909083318cf63707c044", false)
+        ColourNote("red","black","Plugin disabled.")
+    else
+        f()
+    end
+end
+
+loadluafile ("lotj_colors.lua")
+loadluafile ("LotJMSDPHelper.lua")
 
 -------------------------------------------------------------------
 -- Global variables
