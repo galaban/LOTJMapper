@@ -20,4 +20,4 @@ https://raw.github.com/galaban/LOTJMapper/master/LOTJ_Mapper.xml
 2. Place the raw file into your "plugins" directory.  This is fund in your Mushclient folder under /worlds/plugins.
 3. Install the plugain in MushClient.  From the "File" menu, choose "plugins", then "Add".  Select the file and choose "OK".
 
-Note: This requires colors.lua and Johnson's MSDP plugin... just like Xavious's does..and Johnson's.
+Note: This requires colors.lua and Johnson's MSDP plugin... just like Xavious's does
